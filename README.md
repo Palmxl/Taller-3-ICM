@@ -1,7 +1,7 @@
 # Taller 3-ICM
 
 ## 👥 Integrantes Grupo SinWifi
-- Juan Martín Sánchez Burbano  
+- Juan Martín Sánchez  
 - Natalia Ramirez  
 - Santiago Saavedra
 - Johan Mendez 
