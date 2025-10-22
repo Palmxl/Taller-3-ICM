@@ -24,7 +24,7 @@
         android:theme="@style/Theme.Taller3ICM"
         tools:targetApi="34">
 
-        <!-- 🔹 Pantalla principal: Login -->
+        <!-- 🔹 Pantalla inicial: Login -->
         <activity
             android:name=".auth.LoginActivity"
             android:exported="true">
@@ -34,16 +34,30 @@
             </intent-filter>
         </activity>
 
-        <!-- 🔹 Registro -->
+        <!-- 🔹 Registro de usuario -->
         <activity
             android:name=".auth.RegisterActivity"
             android:exported="false" />
 
-        <!-- 🔹 Bienvenida / Perfil -->
+        <!-- 🔹 Pantalla de bienvenida / perfil -->
         <activity
             android:name=".auth.WelcomeActivity"
             android:exported="false" />
 
-    </application>
+        <!-- 🔹 Menú principal (Persona 3) -->
+        <activity
+            android:name=".menu.MenuActivity"
+            android:exported="false" />
 
+        <!-- 🔹 Lista de usuarios disponibles -->
+        <activity
+            android:name=".menu.ListaDisponiblesActivity"
+            android:exported="false" />
+
+        <!-- 🔹 Mapa de posición en tiempo real -->
+        <activity
+            android:name=".menu.VerPosicionActivity"
+            android:exported="false" />
+
+    </application>
 </manifest>

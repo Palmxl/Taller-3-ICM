@@ -61,6 +61,9 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.16.0")
     kapt("com.github.bumptech.glide:compiler:4.16.0")
 
+    // ---- OpenStreetMap (osmdroid) ----
+    implementation("org.osmdroid:osmdroid-android:6.1.18")
+
     // Firebase
     implementation(platform("com.google.firebase:firebase-bom:33.0.0"))
     implementation("com.google.firebase:firebase-auth-ktx")

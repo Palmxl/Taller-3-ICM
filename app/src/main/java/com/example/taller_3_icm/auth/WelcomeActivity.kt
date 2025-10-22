@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.example.taller_3_icm.databinding.ActivityWelcomeBinding
+import com.example.taller_3_icm.menu.MenuActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 
@@ -33,6 +34,11 @@ class WelcomeActivity : AppCompatActivity() {
             if (!imagenUrl.isNullOrEmpty()) {
                 Glide.with(this).load(imagenUrl).into(binding.imgPerfilWelcome)
             }
+        }
+
+        // Nuevo botón para ir al Menú Principal
+        binding.btnIrMenu.setOnClickListener {
+            startActivity(Intent(this, MenuActivity::class.java))
         }
 
         // Botón cerrar sesión

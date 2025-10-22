@@ -7,5 +7,6 @@ data class User(
     var email: String = "",
     var latitud: Double = 0.0,
     var longitud: Double = 0.0,
-    var imagenUrl: String = ""
+    var imagenUrl: String = "",
+    var status: String = "offline"
 )

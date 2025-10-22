@@ -25,6 +25,13 @@
         android:layout_marginBottom="12dp" />
 
     <Button
+        android:id="@+id/btnIrMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ir al Menú Principal"
+        android:layout_marginBottom="10dp" />
+
+    <Button
         android:id="@+id/btnCerrarSesion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
