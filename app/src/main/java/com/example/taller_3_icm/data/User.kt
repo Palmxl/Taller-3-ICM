@@ -1,4 +1,4 @@
-package com.example.taller_3_icm.model
+package com.example.taller_3_icm.data
 
 data class User(
     var nombre: String = "",
