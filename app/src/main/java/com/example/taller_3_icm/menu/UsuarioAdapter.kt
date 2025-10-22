@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.taller_3_icm.databinding.ItemUsuarioBinding
-import com.example.taller_3_icm.model.User
+import com.example.taller_3_icm.data.User
 
 class UsuarioAdapter(
     private val context: Context,

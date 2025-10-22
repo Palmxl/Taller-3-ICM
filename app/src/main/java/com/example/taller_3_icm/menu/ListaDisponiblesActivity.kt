@@ -5,7 +5,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.taller_3_icm.databinding.ActivityListaDisponiblesBinding
-import com.example.taller_3_icm.model.User
+import com.example.taller_3_icm.data.User
 import com.google.firebase.database.*
 
 class ListaDisponiblesActivity : AppCompatActivity() {
