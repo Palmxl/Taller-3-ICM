@@ -2,12 +2,27 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- Permisos OSM + ubicación -->
+    <!-- Permisos generales -->
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+    <!-- Ubicación -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- Cámara y almacenamiento -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- Desde Android 13 (Tiramisu), este permiso cambió -->
+    <uses-permission
+        android:name="android.permission.READ_MEDIA_IMAGES"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+
+    <!-- Hardware opcional (no obligatorio) -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
 
     <application
         android:allowBackup="true"
@@ -17,11 +32,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Taller3ICM">
+        android:theme="@style/Theme.Taller3ICM"
+        tools:targetApi="34">
 
-        <!-- Lanzador -->
+        <!-- Pantalla inicial -->
         <activity
-            android:name="com.example.taller_3_icm.MainActivity"
+            android:name=".auth.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,13 +45,41 @@
             </intent-filter>
         </activity>
 
+        <!-- Mapa de seguimiento (OSMDroid) -->
         <activity
             android:name="com.example.taller_3_icm.FollowMapActivity"
             android:exported="false" />
 
-        <activity android:name=".HomeMapActivity"/>
+        <!-- Mapa principal -->
+        <activity
+            android:name=".HomeMapActivity"
+            android:exported="false" />
 
+        <!-- Registro -->
+        <activity
+            android:name=".auth.RegisterActivity"
+            android:exported="false" />
 
+        <!-- Bienvenida / perfil -->
+        <activity
+            android:name=".auth.WelcomeActivity"
+            android:exported="false" />
+
+        <!-- Menú principal -->
+        <activity
+            android:name=".menu.MenuActivity"
+            android:exported="false" />
+
+        <!-- Lista de usuarios -->
+        <activity
+            android:name=".menu.ListaDisponiblesActivity"
+            android:exported="false" />
+
+        <!-- Ver ubicación de otros -->
+        <activity
+            android:name=".menu.VerPosicionActivity"
+            android:exported="false" />
 
     </application>
 </manifest>
+
