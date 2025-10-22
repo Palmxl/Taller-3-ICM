@@ -2,16 +2,27 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- ✅ Hardware opcional -->
+    <!-- Permisos generales -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Ubicación -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- Cámara y almacenamiento -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- Desde Android 13 (Tiramisu), este permiso cambió -->
+    <uses-permission
+        android:name="android.permission.READ_MEDIA_IMAGES"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+
+    <!-- Hardware opcional (no obligatorio) -->
     <uses-feature
         android:name="android.hardware.camera"
         android:required="false" />
-
-    <!-- ✅ Permisos necesarios -->
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -24,7 +35,7 @@
         android:theme="@style/Theme.Taller3ICM"
         tools:targetApi="34">
 
-        <!-- 🔹 Pantalla inicial: Login -->
+        <!-- Pantalla inicial -->
         <activity
             android:name=".auth.LoginActivity"
             android:exported="true">
@@ -34,30 +45,41 @@
             </intent-filter>
         </activity>
 
-        <!-- 🔹 Registro de usuario -->
+        <!-- Mapa de seguimiento (OSMDroid) -->
+        <activity
+            android:name="com.example.taller_3_icm.FollowMapActivity"
+            android:exported="false" />
+
+        <!-- Mapa principal -->
+        <activity
+            android:name=".HomeMapActivity"
+            android:exported="false" />
+
+        <!-- Registro -->
         <activity
             android:name=".auth.RegisterActivity"
             android:exported="false" />
 
-        <!-- 🔹 Pantalla de bienvenida / perfil -->
+        <!-- Bienvenida / perfil -->
         <activity
             android:name=".auth.WelcomeActivity"
             android:exported="false" />
 
-        <!-- 🔹 Menú principal (Persona 3) -->
+        <!-- Menú principal -->
         <activity
             android:name=".menu.MenuActivity"
             android:exported="false" />
 
-        <!-- 🔹 Lista de usuarios disponibles -->
+        <!-- Lista de usuarios -->
         <activity
             android:name=".menu.ListaDisponiblesActivity"
             android:exported="false" />
 
-        <!-- 🔹 Mapa de posición en tiempo real -->
+        <!-- Ver ubicación de otros -->
         <activity
             android:name=".menu.VerPosicionActivity"
             android:exported="false" />
 
     </application>
 </manifest>
+
