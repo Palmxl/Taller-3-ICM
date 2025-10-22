@@ -1,13 +1,10 @@
-📱 Taller 3 - Introducción a la Computación Móvil
+# Taller 3-ICM
 
-Pontificia Universidad Javeriana - 2025-30
-Asignatura: Introducción a la Computación Móvil
-Grupo de trabajo: SIN WIFI
+## 👥 Integrantes Grupo SinWifi
+- Juan Martín Sánchez Burbano  
+- Natalia Ramirez  
+- Santiago Saavedra
+- Johan Mendez 
 
-Juan Martín Sánchez
-
-Santiago Saavedra
-
-Johan Méndez
-
-Natalia Ramírez
+## 🎥 Enlace del Video
+- 
